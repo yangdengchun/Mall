@@ -1,0 +1,13 @@
+com\project\mall\entity\Category.class
+com\project\mall\entity\Product.class
+com\project\mall\entity\ProductComments.class
+com\project\mall\entity\ProductSku.class
+com\project\mall\entity\OrderItem.class
+com\project\mall\entity\ProductParams.class
+com\project\mall\entity\Users.class
+com\project\mall\entity\IndexImg.class
+com\project\mall\entity\ProductImg.class
+com\project\mall\entity\UserAddr.class
+com\project\mall\entity\Orders.class
+com\project\mall\entity\UserLoginHistory.class
+com\project\mall\entity\ShoppingCart.class

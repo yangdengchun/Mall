@@ -1,0 +1,6 @@
+com\project\mall\service\CategoryService.class
+com\project\mall\service\Impl\IndexImgServiceImpl.class
+com\project\mall\service\IndexImgService.class
+com\project\mall\service\UserService.class
+com\project\mall\service\Impl\CategoryServiceImpl.class
+com\project\mall\service\Impl\UserServiceImpl.class

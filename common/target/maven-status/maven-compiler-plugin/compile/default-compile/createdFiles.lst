@@ -1,0 +1,4 @@
+com\project\mall\utils\Base64Utils.class
+com\project\mall\utils\MD5Utils.class
+com\project\mall\vo\ResultStatus.class
+com\project\mall\vo\ResultVo.class

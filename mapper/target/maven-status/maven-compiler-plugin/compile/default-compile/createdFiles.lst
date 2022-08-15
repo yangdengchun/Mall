@@ -1,0 +1,14 @@
+com\project\mall\dao\ProductSkuMapper.class
+com\project\mall\dao\ProductParamsMapper.class
+com\project\mall\dao\UserLoginHistoryMapper.class
+com\project\mall\dao\UsersMapper.class
+com\project\mall\dao\ProductMapper.class
+com\project\mall\dao\ShoppingCartMapper.class
+com\project\mall\general\GeneralDao.class
+com\project\mall\dao\UserAddrMapper.class
+com\project\mall\dao\ProductCommentsMapper.class
+com\project\mall\dao\OrderItemMapper.class
+com\project\mall\dao\IndexImgMapper.class
+com\project\mall\dao\CategoryMapper.class
+com\project\mall\dao\OrdersMapper.class
+com\project\mall\dao\ProductImgMapper.class

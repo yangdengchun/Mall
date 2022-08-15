@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3308/mall?characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+      username: root
+      password: 123456
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.project.mall.entity
