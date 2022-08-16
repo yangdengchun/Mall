@@ -1,6 +1,7 @@
 package com.project.mall.controller;
 import com.project.mall.service.CategoryService;
 import com.project.mall.service.IndexImgService;
+import com.project.mall.service.ProductService;
 import com.project.mall.vo.ResultVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -29,6 +30,8 @@ public class IndexController {
     private IndexImgService indexImgService;
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private ProductService productService;
 
     @GetMapping("/indeximg")
     @ApiOperation("首页轮播图接口")
@@ -43,4 +46,9 @@ public class IndexController {
         return categoryService.listCategories();
     }
 
+    @GetMapping("/list-recommends")
+    @ApiOperation("查询推荐商品的接口")
+    public ResultVo listRecommendProducts(){
+        return productService.listRecommendProducts();
+    }
 }

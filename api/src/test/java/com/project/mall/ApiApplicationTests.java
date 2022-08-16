@@ -1,13 +1,16 @@
 package com.project.mall;
 
 import com.project.mall.dao.CategoryMapper;
+import com.project.mall.dao.ProductMapper;
 import com.project.mall.entity.Category;
+import com.project.mall.entity.Product;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -16,6 +19,8 @@ class ApiApplicationTests {
 
     @Autowired
     private CategoryMapper categoryMapper;
+    @Resource
+    private ProductMapper productMapper;
 
     @Test
     void contextLoads() {
@@ -32,4 +37,11 @@ class ApiApplicationTests {
         }
     }
 
+    @Test
+    public void testRecommand(){
+        List<Product> products = productMapper.selectRecommendProducts();
+        for (Product p : products){
+            System.out.println(p);
+        }
+    }
 }

@@ -1,9 +1,12 @@
 package com.project.mall.entity;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.*;
 
 public class Product {
+
+
     /**
      * 商品主键id
      */
@@ -52,6 +55,18 @@ public class Product {
      */
     @Column(name = "update_time")
     private Date updateTime;
+
+
+    //新增存储图片集属性
+    private List<ProductImg> imgs;
+
+    public List<ProductImg> getImgs() {
+        return imgs;
+    }
+
+    public void setImgs(List<ProductImg> imgs) {
+        this.imgs = imgs;
+    }
 
     /**
      * 商品内容 商品内容
@@ -217,6 +232,23 @@ public class Product {
      * @param content 商品内容 商品内容
      */
     public void setContent(String content) {
+
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "imgs=" + imgs +
+                ", productId='" + productId + '\'' +
+                ", productName='" + productName + '\'' +
+                ", categoryId=" + categoryId +
+                ", rootCategoryId=" + rootCategoryId +
+                ", soldNum=" + soldNum +
+                ", productStatus=" + productStatus +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", content='" + content + '\'' +
+                '}';
     }
 }
