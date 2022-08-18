@@ -13,4 +13,5 @@ public interface ProductService {
 
     public ResultVo listRecommendProducts();
 
+    public ResultVo getProductBasicInfo(Integer productId);
 }
