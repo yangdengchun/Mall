@@ -9,5 +9,10 @@ import java.util.List;
 public interface ProductMapper extends GeneralDao<Product> {
 
     public List<Product> selectRecommendProducts();
-
+    /**
+     * 查询指定以及类别下销量最高的8个商品
+     * @param cid
+     * @return
+     */
+    public List<Product> selectTop8ByCategory(int cid);
 }

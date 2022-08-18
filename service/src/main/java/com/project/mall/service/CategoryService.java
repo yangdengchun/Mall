@@ -8,4 +8,6 @@ public interface CategoryService {
     public ResultVo listCategories();
 
     public ResultVo listCategories2(int i);
+
+    public ResultVo listFirseLevelCategories();
 }

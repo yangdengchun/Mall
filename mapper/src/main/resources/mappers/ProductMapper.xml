@@ -12,8 +12,7 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
-
-  <resultMap id="oneResultMap" type="com.project.mall.entity.Product">
+  <resultMap id="ProductMap" type="com.project.mall.entity.Product">
     <id column="product_id" jdbcType="VARCHAR" property="productId" />
     <result column="product_name" jdbcType="VARCHAR" property="productName" />
     <result column="category_id" jdbcType="INTEGER" property="categoryId" />
@@ -26,7 +25,7 @@
     <collection property="imgs" select="com.project.mall.dao.ProductImgMapper.selectProductImgByProductId" column="product_id"/>
   </resultMap>
 
-  <select id="selectRecommendProducts" resultMap="oneResultMap">
+  <select id="selectRecommendProducts" resultMap="ProductMap">
     select
       product_id,
       product_name,
@@ -41,4 +40,26 @@
     order by create_time desc
     limit 0,3;
   </select>
+
+  <select id="selectTop8ByCategory" resultMap="ProductMap">
+    select
+      product_id,
+      product_name,
+      category_id,
+      root_category_id,
+      sold_num,
+      product_status,
+      content,
+      create_time,
+      update_time
+    from product
+    where root_category_id=#{cid}
+    order by sold_num desc
+    limit 0,8;
+  </select>
+
+
 </mapper>
+
+
+

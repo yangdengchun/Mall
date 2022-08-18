@@ -22,6 +22,7 @@ class ApiApplicationTests {
     @Resource
     private ProductMapper productMapper;
 
+
     @Test
     void contextLoads() {
         //连接查询
@@ -38,10 +39,20 @@ class ApiApplicationTests {
     }
 
     @Test
+    //商品推荐
     public void testRecommand(){
         List<Product> products = productMapper.selectRecommendProducts();
         for (Product p : products){
             System.out.println(p);
+        }
+    }
+
+    @Test
+    //分类展示
+    public void testSelectFirstLevelCategory(){
+        List<Category> categories = categoryMapper.selectFirstLevelCategories();
+        for (Category c : categories){
+            System.out.println(c);
         }
     }
 }

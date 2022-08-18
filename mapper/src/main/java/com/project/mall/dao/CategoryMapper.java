@@ -13,4 +13,7 @@ public interface CategoryMapper extends GeneralDao<Category> {
     public List<Category> selectAllCategories();
     //子查询  根据parentid查询子分类
     public List<Category> selectAllCategories2(int parentId);
+
+    //查询一级类别
+    public List<Category> selectFirstLevelCategories();
 }

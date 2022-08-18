@@ -30,5 +30,15 @@ public class CategoryServiceImpl implements CategoryService {
     public ResultVo listCategories2(int i) {
         List<Category> category = categoryMapper.selectAllCategories2(i);
         ResultVo resultVo = new ResultVo(ResultStatus.OK, "success", category);
-        return resultVo;    }
+        return resultVo;
+    }
+
+    @Override
+    /**
+     * 查询一级分类，同时查询一级分类下销量最高的8个商品
+     */
+    public ResultVo listFirseLevelCategories() {
+        List<Category> categories = categoryMapper.selectFirstLevelCategories();
+        return new ResultVo(ResultStatus.OK,"success",categories);
+    }
 }
